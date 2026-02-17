@@ -27,6 +27,10 @@ body {
   box-sizing: border-box;
 }
 
+.heading {
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
 #navbar {
   position: fixed;
   top: 0;
