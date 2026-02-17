@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url("assets/fonts/Hanken_Grotesk/HankenGrotesk-VariableFont_wght.ttf");
+}
+
+/* *{
+    border: 1px solid black;
+} */
+
+:root {
+  --background: #ffffff;
+  --text: #000000;
+  --text-secondary: #00000080;
+  --footer-background: #f8f9f8;
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+  font-family: "Arial", sans-serif;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  background-color: var(--background);
+  z-index: 1000;
+}
