@@ -56,6 +56,38 @@ body {
   transition: transform 1s ease-in-out;
 }
 
+/* ----------------------------------- faq ---------------------------------- */
+.faq-menu {
+  font-size: 13px;
+  background: #ffffff33;
+  border: solid 2px #828282;
+  border-radius: 25px;
+  padding: 10px 15px;
+  text-transform: uppercase;
+}
+
+.faq-menu.active {
+  font-size: 13px;
+  background: var(--background);
+  color: var(--text);
+  border: solid 2px #828282;
+  border-radius: 25px;
+  padding: 10px 15px;
+  text-transform: uppercase;
+}
+
+.faq-content {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.faq-content.active {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 0;
+}
+
 @media screen and (max-width: 768px) {
   #plaimanas-floating-img.scale-down {
     transform: scale(1);

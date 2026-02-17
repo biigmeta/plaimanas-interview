@@ -93,22 +93,22 @@
                         >
                           <a
                             href="#"
-                            class="text-[text-fade] hover:scale-105 duration-300 transition-transform"
+                            class="text-[text-secondary] hover:scale-105 duration-300 transition-transform"
                             >A.S.C</a
                           >
                           <a
                             href="#"
-                            class="text-[text-fade] hover:scale-105 duration-300 transition-transform"
+                            class="text-[text-secondary] hover:scale-105 duration-300 transition-transform"
                             >BAZAAR</a
                           >
                           <a
                             href="#"
-                            class="text-[text-fade] hover:scale-105 duration-300 transition-transform"
+                            class="text-[text-secondary] hover:scale-105 duration-300 transition-transform"
                             >ELLE</a
                           >
                           <a
                             href="#"
-                            class="text-[text-fade] hover:scale-105 duration-300 transition-transform"
+                            class="text-[text-secondary] hover:scale-105 duration-300 transition-transform"
                             >GQ</a
                           >
                         </div>
@@ -275,7 +275,7 @@
       <section class="w-full px-6 pt-24 md:px-32">
         <div class="flex flex-col gap-4">
           <div
-            class="relative flex flex-col gap-4 justify-center items-center mx-auto w-full md:w-full h-[220px] text-center md:h-[760px] bg-blue-300"
+            class="relative flex flex-col gap-4 justify-center items-center mx-auto w-full md:w-full h-[220px] text-center md:h-[760px]"
           >
             <h1
               class="heading sticky top-[20%] text-4xl md:text-[5rem] text-[var(--background)] font-black z-10 uppercase"
@@ -312,6 +312,7 @@
           </div>
         </div>
       </section>
+      <!-- ----------------------------- collections ----------------------------- -->
       <section class="w-full px-6 pt-24 md:px-72">
         <div class="w-full md:w-full mx-auto grid grid-cols-2 gap-6 md:gap-18">
           <div class="w-full col-span-2">
@@ -442,9 +443,281 @@
           </div>
         </div>
       </section>
-      <section class="w-full px-6 pt-24 md:px-32">featured</section>
+      <!-- ------------------------------ featured ------------------------------- -->
       <section class="w-full px-6 pt-24 md:px-32">
-        <p>faq</p>
+        <div class="flex flex-col md:flex-row justify-around gap-12 md:gap-0">
+          <div class="text-left flex flex-col gap-2 w-4/5 md:w-1/5">
+            <h5 class="font-bold uppercase">Worldwide shipping</h5>
+            <p class="normal-case opacity-60 text-[14px]">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+              ornare, nisl non rhoncus commodo, turpis elit ultricies justo,
+              vitae molestie quam justo ut lacus. Proin vitae
+            </p>
+          </div>
+          <div class="text-left flex flex-col gap-2 w-4/5 md:w-1/5">
+            <h5 class="font-bold uppercase">Customer Service</h5>
+            <p class="normal-case opacity-60 text-[14px]">
+              <u>Lorem ipsum dolor sit amet</u>, consectetur adipiscing elit.
+              Nam ornare, nisl non rhoncus commodo, turpis elit ultricies justo,
+              vitae molestie quam justo ut lacus. Proin vitae
+            </p>
+          </div>
+          <div class="text-left flex flex-col gap-2 w-4/5 md:w-1/5">
+            <h5 class="font-bold uppercase">Secure Payment</h5>
+            <p class="normal-case opacity-60 text-[14px]">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+              ornare, nisl non rhoncus commodo, turpis elit ultricies justo,
+              vitae molestie quam justo ut lacus. Proin vitae
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="w-full pt-24">
+        <div
+          class="bg-[var(--text)] text-[var(--background)] text-center flex flex-col gap-4 px-6 md:px-64 py-24"
+        >
+          <h2 class="heading font-black text-[24px] md:text-[40px]">
+            FREQUENTLY ASKED QUESTIONS
+          </h2>
+          <p class="text-[14px] normal-case">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare,
+            nisl non rhoncus commodo.
+          </p>
+          <!-- ------------------------------ faq menu ------------------------------- -->
+          <div
+            class="flex flex-col md:flex-row items-center justify-center gap-8"
+          >
+            <button
+              class="faq-menu"
+              name="shipping"
+              onclick="selectFAQMenu.call(this)"
+            >
+              Orders
+            </button>
+            <button
+              class="faq-menu active"
+              name="shipping"
+              onclick="selectFAQMenu.call(this)"
+            >
+              Shipping
+            </button>
+            <button
+              class="faq-menu"
+              name="returns"
+              onclick="selectFAQMenu.call(this)"
+            >
+              Returns & Exchanges
+            </button>
+            <button
+              class="faq-menu"
+              name="returns"
+              onclick="selectFAQMenu.call(this)"
+            >
+              Sizing & Products
+            </button>
+          </div>
+          <!-- -------------------------- accordion content -------------------------- -->
+          <div class="relative mt-8">
+            <!-- ------------------------------ shipping ------------------------------- -->
+            <div
+              id="faq-shipping"
+              class="faq-content p-0 md:p-12 transition-opacity active"
+            >
+              <!-- Accordion Item 1 -->
+              <div class="border-b border-slate-200">
+                <button
+                  onclick="toggleFAQAccordion('shipping', 1)"
+                  class="w-full flex justify-between items-center py-5"
+                >
+                  <span class="text-[16px] font-bold uppercase text-left"
+                    >Do you offer international shipping?</span
+                  >
+                  <span
+                    id="icon-shipping-1"
+                    class="rotate-180 transition-transform duration-300"
+                  >
+                    <img
+                      src="assets/svg/arrow-up.svg"
+                      class="h-4 w-4"
+                      alt="Arrow up image"
+                    />
+                  </span>
+                </button>
+                <div
+                  id="content-shipping-1"
+                  class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+                >
+                  <p class="text-left text-[14px] pb-5 normal-case opacity-60">
+                    Items can be returned within 14 days of receipt, provided
+                    they are unworn, unwashed, and in original condition with
+                    tags attached.
+                  </p>
+                </div>
+              </div>
+              <!-- Accordion Item 2 -->
+              <div class="border-b border-slate-200">
+                <button
+                  onclick="toggleFAQAccordion('shipping',2)"
+                  class="w-full flex justify-between items-center py-5"
+                >
+                  <span class="text-[16px] font-bold uppercase"
+                    >How long does delivery take?</span
+                  >
+                  <span
+                    id="icon-shipping-2"
+                    class="rotate-180 transition-transform duration-300"
+                  >
+                    <img
+                      src="assets/svg/arrow-up.svg"
+                      class="h-4 w-4"
+                      alt="Arrow up image"
+                    />
+                  </span>
+                </button>
+                <div
+                  id="content-shipping-2"
+                  class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+                >
+                  <p class="text-left text-[14px] pb-5 normal-case opacity-60">
+                    Items can be returned within 14 days of receipt, provided
+                    they are unworn, unwashed, and in original condition with
+                    tags attached.
+                  </p>
+                </div>
+              </div>
+              <!-- Accordion Item 3 -->
+              <div class="border-b border-slate-200">
+                <button
+                  onclick="toggleFAQAccordion('shipping',3)"
+                  class="w-full flex justify-between items-center py-5"
+                >
+                  <span class="text-[16px] font-bold uppercase"
+                    >How can I track my order?</span
+                  >
+                  <span
+                    id="icon-shipping-3"
+                    class="rotate-180 transition-transform duration-300"
+                  >
+                    <img
+                      src="assets/svg/arrow-up.svg"
+                      class="h-4 w-4"
+                      alt="Arrow up image"
+                    />
+                  </span>
+                </button>
+                <div
+                  id="content-shipping-3"
+                  class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+                >
+                  <p class="text-left text-[14px] pb-5 normal-case opacity-60">
+                    Items can be returned within 14 days of receipt, provided
+                    they are unworn, unwashed, and in original condition with
+                    tags attached.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- ------------------------------- returns ------------------------------- -->
+            <div
+              id="faq-returns"
+              class="absolute top-0 left-0 w-full faq-content p-0 md:p-12 transition-opacity"
+            >
+              <!-- Accordion Item 1 -->
+              <div class="border-b border-slate-200">
+                <button
+                  onclick="toggleFAQAccordion('returns',1)"
+                  class="w-full flex justify-between items-center py-5"
+                >
+                  <span class="text-[16px] font-bold uppercase"
+                    >What is your return policy?</span
+                  >
+                  <span
+                    id="icon-returns-1"
+                    class="rotate-180 transition-transform duration-300"
+                  >
+                    <img
+                      src="assets/svg/arrow-up.svg"
+                      class="h-4 w-4"
+                      alt="Arrow up image"
+                    />
+                  </span>
+                </button>
+                <div
+                  id="content-returns-1"
+                  class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+                >
+                  <p class="text-left text-[14px] pb-5 normal-case opacity-60">
+                    Items can be returned within 14 days of receipt, provided
+                    they are unworn, unwashed, and in original condition with
+                    tags attached.
+                  </p>
+                </div>
+              </div>
+              <!-- Accordion Item 2 -->
+              <div class="border-b border-slate-200">
+                <button
+                  onclick="toggleFAQAccordion('returns',2)"
+                  class="w-full flex justify-between items-center py-5"
+                >
+                  <span class="text-[16px] font-bold uppercase"
+                    >Can I exchange for a different size?</span
+                  >
+                  <span
+                    id="icon-returns-2"
+                    class="rotate-180 transition-transform duration-300"
+                  >
+                    <img
+                      src="assets/svg/arrow-up.svg"
+                      class="h-4 w-4"
+                      alt="Arrow up image"
+                    />
+                  </span>
+                </button>
+                <div
+                  id="content-returns-2"
+                  class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+                >
+                  <p class="text-left text-[14px] pb-5 normal-case opacity-60">
+                    Items can be returned within 14 days of receipt, provided
+                    they are unworn, unwashed, and in original condition with
+                    tags attached.
+                  </p>
+                </div>
+              </div>
+              <!-- Accordion Item 3 -->
+              <div class="border-b border-slate-200">
+                <button
+                  onclick="toggleFAQAccordion('returns',3)"
+                  class="w-full flex justify-between items-center py-5"
+                >
+                  <span class="text-[16px] font-bold uppercase"
+                    >Are sale items refundable?</span
+                  >
+                  <span
+                    id="icon-returns-3"
+                    class="rotate-180 transition-transform duration-300"
+                  >
+                    <img
+                      src="assets/svg/arrow-up.svg"
+                      class="h-4 w-4"
+                      alt="Arrow up image"
+                    />
+                  </span>
+                </button>
+                <div
+                  id="content-returns-3"
+                  class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+                >
+                  <p class="text-left text-[14px] pb-5 normal-case opacity-60">
+                    Items can be returned within 14 days of receipt, provided
+                    they are unworn, unwashed, and in original condition with
+                    tags attached.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <footer>
