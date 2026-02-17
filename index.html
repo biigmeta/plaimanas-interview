@@ -472,9 +472,10 @@
           </div>
         </div>
       </section>
+      <!-- --------------------------------- faq --------------------------------- -->
       <section class="w-full pt-24">
         <div
-          class="bg-[var(--text)] text-[var(--background)] text-center flex flex-col gap-4 px-6 md:px-64 py-24"
+          class="bg-[var(--text)] text-[var(--background)] text-center flex flex-col gap-4 px-6 md:px-54 py-24"
         >
           <h2 class="heading font-black text-[24px] md:text-[40px]">
             FREQUENTLY ASKED QUESTIONS
@@ -523,7 +524,7 @@
               id="faq-shipping"
               class="faq-content p-0 md:p-12 transition-opacity active"
             >
-              <!-- Accordion Item 1 -->
+              <!-- ------------------------------- item 1 -------------------------------- -->
               <div class="border-b border-slate-200">
                 <button
                   onclick="toggleFAQAccordion('shipping', 1)"
@@ -554,7 +555,7 @@
                   </p>
                 </div>
               </div>
-              <!-- Accordion Item 2 -->
+              <!-- ------------------------------- item 2 -------------------------------- -->
               <div class="border-b border-slate-200">
                 <button
                   onclick="toggleFAQAccordion('shipping',2)"
@@ -585,7 +586,7 @@
                   </p>
                 </div>
               </div>
-              <!-- Accordion Item 3 -->
+              <!-- ------------------------------- item 3 -------------------------------- -->
               <div class="border-b border-slate-200">
                 <button
                   onclick="toggleFAQAccordion('shipping',3)"
@@ -622,7 +623,7 @@
               id="faq-returns"
               class="absolute top-0 left-0 w-full faq-content p-0 md:p-12 transition-opacity"
             >
-              <!-- Accordion Item 1 -->
+              <!-- ------------------------------- item 1 -------------------------------- -->
               <div class="border-b border-slate-200">
                 <button
                   onclick="toggleFAQAccordion('returns',1)"
@@ -653,7 +654,7 @@
                   </p>
                 </div>
               </div>
-              <!-- Accordion Item 2 -->
+              <!-- ------------------------------- item 2 -------------------------------- -->
               <div class="border-b border-slate-200">
                 <button
                   onclick="toggleFAQAccordion('returns',2)"
@@ -684,7 +685,7 @@
                   </p>
                 </div>
               </div>
-              <!-- Accordion Item 3 -->
+              <!-- ------------------------------- item 3 -------------------------------- -->
               <div class="border-b border-slate-200">
                 <button
                   onclick="toggleFAQAccordion('returns',3)"
@@ -719,9 +720,223 @@
           </div>
         </div>
       </section>
+      <!-- ------------------------------ contact ------------------------------- -->
+      <section class="w-full px-6 pt-24 md:px-64">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div class="col-span-1 text-left flex flex-col gap-2 md:gap-4">
+            <h2
+              class="heading font-black text-[24px] md:text-[40px] w-full md:w-3/5 leading-10 uppercase"
+            >
+              Make an Inquiry
+            </h2>
+            <p class="text-[14px] normal-case w-full md:w-3/5">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+              ornare, nisl non rhoncus commodo.
+            </p>
+          </div>
+          <div class="col-span-1 md:col-span-2">
+            <div class="radio-group">
+              <!-- toggle onsite and hybrid -->
+              <label
+                class="radio flex items-center gap-1 normal-case text-[14px] mr-6"
+              >
+                <input type="radio" name="inquiry-type" checked="checked" />
+                <span class="dot"></span>
+                Onsite
+              </label>
+              <label
+                class="radio flex items-center gap-1 normal-case text-[14px]"
+              >
+                <input type="radio" name="inquiry-type" />
+                <span class="dot"></span>
+                Hybrid
+              </label>
+            </div>
+            <form>
+              <div class="grid grid-cols-2 gap-6 mt-6">
+                <div class="col-span-2 md:col-span-1 relative mt-5">
+                  <input
+                    id="standard"
+                    type="text"
+                    class="bg-white w-full border-b py-1 text-lg transition-all peer outline-none"
+                    placeholder=""
+                    required
+                  />
+                  <label
+                    for="standard"
+                    name="field"
+                    class="opacity-60 text-[14px] absolute left-0 -top-5 peer-focus:text-[10px] peer-focus:-top-5 cursor-text float-labels peer-placeholder-shown:top-0 truncate max-w-[calc(100%-18px)] normal-case duration-300"
+                  >
+                    Full name*
+                  </label>
+                </div>
+                <div class="col-span-2 md:col-span-1 relative mt-5">
+                  <input
+                    id="standard"
+                    type="email"
+                    class="bg-white w-full border-b py-1 text-lg transition-all peer outline-none"
+                    placeholder=""
+                    required
+                  />
+                  <label
+                    for="standard"
+                    name="field"
+                    class="opacity-60 text-[14px] absolute left-0 -top-5 peer-focus:text-[10px] peer-focus:-top-5 cursor-text float-labels peer-placeholder-shown:top-0 truncate max-w-[calc(100%-18px)] normal-case duration-300"
+                  >
+                    Email*
+                  </label>
+                </div>
+                <div class="col-span-2 md:col-span-1 relative mt-5">
+                  <input
+                    id="standard"
+                    type="tel"
+                    class="bg-white w-full border-b py-1 text-lg transition-all peer outline-none"
+                    placeholder=""
+                    required
+                  />
+                  <label
+                    for="standard"
+                    name="field"
+                    class="opacity-60 text-[14px] absolute left-0 -top-5 peer-focus:text-[10px] peer-focus:-top-5 cursor-text float-labels peer-placeholder-shown:top-0 truncate max-w-[calc(100%-18px)] normal-case duration-300"
+                  >
+                    Phone Number*
+                  </label>
+                </div>
+                <div class="col-span-2 md:col-span-1 relative mt-5">
+                  <!-- ------------------------------- select -------------------------------- -->
+                  <select
+                    id="standard"
+                    class="bg-white w-full border-b py-1.5 text-lg transition-all peer outline-none cursor-pointer"
+                    required
+                  >
+                    <option value="" disabled selected></option>
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                  </select>
+                  <label
+                    for="standard"
+                    name="field"
+                    class="opacity-60 text-[14px] absolute left-0 -top-1 peer-focus:text-[10px] peer-focus:-top-5 cursor-text float-labels peer-placeholder-shown:top-0 truncate max-w-[calc(100%-18px)] normal-case duration-300"
+                  >
+                    Subject*
+                  </label>
+                </div>
+                <div class="col-span-2">
+                  <label
+                    class="flex items-center gap-3 text-[var(--text-fade)] normal-case"
+                  >
+                    <input type="checkbox" required class="peer hidden" />
+                    <div
+                      class="peer w-[12px] h-[12px] outline outline-offset-2 flex items-center justify-center peer-checked:bg-[var(--text)]"
+                    ></div>
+                    I agree to all terms & conditions
+                  </label>
+                </div>
+                <div class="col-span-2 text-left mt-4">
+                  <button
+                    type="submit"
+                    class="w-[140px] h-[52px] text-[16px] text-[var(--background)] bg-[var(--text)] px-[30px] py-[10px] uppercase"
+                  >
+                    Send
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer>
-      <p>footer</p>
+    <footer class="w-full bg-[var(--footer-background)] mt-24">
+      <div
+        class="w-full grid grid-cols-2 md:grid-cols-6 gap-x-6 gap-y-12 md:gap-12 px-6 py-8 md:px-12 md:py-0"
+      >
+        <div class="flex flex-col items-start gap-4 p-0 md:p-8">
+          <h5 class="text-[13px] uppercase mb-2">About</h5>
+          <a
+            class="normal-case text-[12px] text-[var(--text-fade)] hover:opacity-60 cursor-default"
+            >Women</a
+          >
+          <a
+            class="normal-case text-[12px] text-[var(--text-fade)] hover:opacity-60 cursor-default"
+            >Collections</a
+          >
+          <a
+            class="normal-case text-[12px] text-[var(--text-fade)] hover:opacity-60 cursor-default"
+            >Editorial</a
+          >
+          <a
+            class="normal-case text-[12px] text-[var(--text-fade)] hover:opacity-60 cursor-default"
+            >Stories</a
+          >
+        </div>
+        <div class="flex flex-col items-start gap-4 p-0 md:p-8">
+          <h5 class="text-[13px] uppercase mb-2">Help</h5>
+          <a
+            class="normal-case text-[12px] text-[var(--text-fade)] hover:opacity-60 cursor-default"
+            >Payment Notification</a
+          >
+          <a
+            class="normal-case text-[12px] text-[var(--text-fade)] hover:opacity-60 cursor-default"
+            >Customer Service</a
+          >
+          <a
+            class="normal-case text-[12px] text-[var(--text-fade)] hover:opacity-60 cursor-default"
+            >FAQ</a
+          >
+        </div>
+        <div class="flex flex-col items-start gap-4 p-0 md:p-8">
+          <h5 class="text-[13px] uppercase mb-2">Social</h5>
+          <a
+            class="normal-case text-[12px] text-[var(--text-fade)] hover:opacity-60 cursor-default"
+            >Instagram</a
+          >
+          <a
+            class="normal-case text-[12px] text-[var(--text-fade)] hover:opacity-60 cursor-default"
+            >Facebook</a
+          >
+        </div>
+        <div class="flex flex-col items-start gap-4 p-0 md:p-8">
+          <h5 class="text-[13px] uppercase mb-2">Legal</h5>
+          <a
+            class="normal-case text-[12px] text-[var(--text-fade)] hover:opacity-60 cursor-default"
+            >Terms & Conditions</a
+          >
+          <a
+            class="normal-case text-[12px] text-[var(--text-fade)] hover:opacity-60 cursor-default"
+            >Privacy Policy</a
+          >
+          <a
+            class="normal-case text-[12px] text-[var(--text-fade)] hover:opacity-60 cursor-default"
+            >Cookies Policy</a
+          >
+        </div>
+        <div class="col-span-2 flex flex-col items-start gap-4 p-0 md:p-8">
+          <h5 class="text-[13px] uppercase mb-2">NEWSLETTER</h5>
+          <div class="w-full col-span-2 md:col-span-2 relative">
+            <input
+              id="standard"
+              type="email"
+              class="w-full bg-transparent w-full border-b py-1 text-lg transition-all peer outline-none"
+              placeholder=""
+            />
+            <label
+              for="standard"
+              name="field"
+              class="opacity-60 text-[14px] absolute left-0 -top-5 peer-focus:text-[10px] peer-focus:-top-5 cursor-text float-labels peer-placeholder-shown:top-0 truncate max-w-[calc(100%-18px)] normal-case duration-300"
+            >
+              Email
+            </label>
+          </div>
+          <button class="w-full bg-[#E0E0E0] uppercase py-2">Subscribe</button>
+        </div>
+      </div>
+      <div class="w-full px-6 py-8 md:px-12 md:py-0">
+        <div class="flex flex-row items-center justify-between p-0 md:p-8">
+          <p class="text-[12px]">©PLAIMANAS</p>
+          <p class="text-[12px]">Web by ::*</p>
+        </div>
+      </div>
     </footer>
 
     <!-- ------------------------------- jquery -------------------------------- -->
