@@ -125,3 +125,26 @@ function toggleMobileAccordion(e) {
     icon.classList.add("mb-4");
   }
 }
+
+async function selectFAQMenu() {
+  $(".faq-menu").removeClass("active");
+  $(this).addClass("active");
+  const target = $(this).attr("name");
+
+  $(".faq-content").removeClass("active");
+  $(`#faq-${target}`).addClass("active");
+}
+
+function toggleFAQAccordion(name, index) {
+  const content = document.getElementById(`content-${name}-${index}`);
+  const icon = document.getElementById(`icon-${name}-${index}`);
+
+  // Toggle the content's max-height for smooth opening and closing
+  if (content.style.maxHeight && content.style.maxHeight !== "0px") {
+    content.style.maxHeight = "0";
+    icon.classList.add("rotate-180");
+  } else {
+    content.style.maxHeight = content.scrollHeight + "px";
+    icon.classList.remove("rotate-180");
+  }
+}
