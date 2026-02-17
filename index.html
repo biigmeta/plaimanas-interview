@@ -139,7 +139,9 @@
                   >Collections</a
                 >
               </li>
-              <li class="group relative flex flex-col items-center justify-center">
+              <li
+                class="group relative flex flex-col items-center justify-center"
+              >
                 <div class="">
                   <a
                     class="text-[13px] hover:font-black duration-300"
@@ -155,7 +157,7 @@
                 <!-- -------------------------- accordion menu -------------------------- -->
                 <div
                   id="mobile-accordion-menu"
-                  class="flex flex-col  max-h-0 gap-4 invisible"
+                  class="flex flex-col max-h-0 gap-4 invisible"
                 >
                   <a href="#" class="mx-2">A.S.C</a>
                   <a href="#" class="mx-2">BAZAAR</a>
@@ -183,7 +185,7 @@
               <img
                 class="absolute bottom-5 left-1/2 transform -translate-x-1/2 origin-top"
                 src="assets/images/PLAIMANAS_BLACK.png"
-                alt="Plaimanas Text Image"
+                alt="Plaimanas Mobile Image"
               />
             </ul>
           </div>
@@ -204,7 +206,33 @@
       </nav>
     </header>
     <main>
-      <p>main</p>
+      <!-- ---------------------- plaimanas floating image ----------------------- -->
+      <img
+        id="plaimanas-floating-img"
+        src="assets/images/PLAIMANAS.png"
+        alt="Plaimanas Image"
+        class="fixed top-[54px] md:top-[72px] left-1/2 w-[96%] transform -translate-x-1/2 z-50"
+      />
+      <!-- ---------------------------- banner video ----------------------------- -->
+      <div class="w-full h-screen">
+        <video
+          src="assets/videos/BANNER.mp4"
+          autoplay
+          muted
+          loop
+          id="banner-video"
+          class="w-full h-full object-cover"
+        >
+          <source src="assets/videos/BANNER.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <section class="w-full px-6 md:px-32">new</section>
+      <section class="w-full px-6 md:px-32">bestseller</section>
+      <section class="w-full px-6 md:px-56">collections</section>
+      <div>
+        <p>scrolling</p>
+      </div>
+      <section class="w-full px-6 md:px-32">featured</section>
     </main>
     <footer>
       <p>footer</p>

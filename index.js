@@ -4,6 +4,15 @@ document.addEventListener("DOMContentLoaded", () => {
   initializeMenuToggle();
 });
 
+document.addEventListener("scroll", () => {
+  const floatingImg = document.getElementById("plaimanas-floating-img");
+  if (window.scrollY > 0) {
+    floatingImg.classList.add("scale-down");
+  } else {
+    floatingImg.classList.remove("scale-down");
+  }
+});
+
 function initializeLanguageDropdown() {
   const languageWrapper = document.getElementById("language-wrapper");
   const languageMenuBtn = document.getElementById("language-menu-button");
@@ -50,7 +59,6 @@ function initializeMenuToggle() {
   const menuImage = document.querySelector("#menu-toggle-button img");
   const menu = document.getElementById("mobile-menu");
   menuToggleBtn.addEventListener("click", () => {
-    
     menuToggleBtn.classList.toggle("active");
     const isActive = menuToggleBtn.classList.contains("active");
     if (isActive) {
