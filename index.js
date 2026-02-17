@@ -2,6 +2,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   initializeLanguageDropdown();
   initializeMenuToggle();
+  initializeScrollAnimations();
 });
 
 document.addEventListener("scroll", () => {
@@ -12,6 +13,27 @@ document.addEventListener("scroll", () => {
     floatingImg.classList.remove("scale-down");
   }
 });
+
+function initializeScrollAnimations() {
+  $(".scrolling").slick({
+    slidesToShow: 3,
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 8000,
+    swipe: false,
+    swipeToSlide: false,
+    cssEase: "linear",
+    adaptiveHeight: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1.25,
+        },
+      },
+    ],
+  });
+}
 
 function initializeLanguageDropdown() {
   const languageWrapper = document.getElementById("language-wrapper");
