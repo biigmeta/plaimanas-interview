@@ -16,6 +16,12 @@
   --text: #000000;
   --text-secondary: #00000080;
   --footer-background: #f8f9f8;
+
+  --radio-size: 20px;
+  --radio-border: 1px;
+  --radio-color: var(--text);
+  --radio-ring: #00000033;
+  --radio-border-color: #00000033;
 }
 
 body {
@@ -88,6 +94,69 @@ body {
   z-index: 0;
 }
 
+/* --------------------------------- contact -------------------------------- */
+.radio-group {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  color: var(--text);
+  user-select: none;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+.radio input {
+  /* ซ่อน radio เดิม แต่ยังเข้าถึงได้ (keyboard / screen reader) */
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.radio .dot {
+  width: var(--radio-size);
+  height: var(--radio-size);
+  border-radius: 999px;
+  border: var(--radio-border) solid var(--radio-border-color);
+  display: inline-grid;
+  place-items: center;
+  transition: 180ms ease;
+  background: #fff;
+}
+
+/* วงในตอนเลือก */
+.radio .dot::after {
+  content: "";
+  width: calc(var(--radio-size) * 0.5);
+  height: calc(var(--radio-size) * 0.5);
+  border-radius: 999px;
+  transform: scale(0);
+  transition: 180ms ease;
+  background: var(--radio-color);
+}
+
+/* checked */
+.radio input:checked + .dot {
+  border-color: var(--radio-color);
+}
+
+.radio input:checked + .dot::after {
+  transform: scale(1.25);
+}
+
+.radio input:disabled + .dot::after {
+  background: #9ca3af;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 checkpoint                                 */
+/* -------------------------------------------------------------------------- */
 @media screen and (max-width: 768px) {
   #plaimanas-floating-img.scale-down {
     transform: scale(1);
